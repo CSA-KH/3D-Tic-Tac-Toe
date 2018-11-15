@@ -337,7 +337,7 @@ def about():
     top.minsize(width=200, height=100)
     top.resizable(width=FALSE, height=FALSE)
     msg = Message(top, text='About')
-    msg2 = Message(top, text='V 1.0.0\nKeenan Hui\n11/11/18')
+    msg2 = Message(top, text='V 1.0.1\nKeenan Hui\n11/11/18')
     msg3 = Message(top, text = '...')
     msg.pack()
     msg2.pack()
