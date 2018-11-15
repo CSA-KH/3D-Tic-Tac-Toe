@@ -106,6 +106,8 @@ def change():
         PLAYERN = 0
         PLAYER = ' X '
 
+    labelWL.config(text = 'Player %s'%PLAYER)
+
 
     if TTTCBL.get() == 'Top':
         UDSL = UDS1
@@ -318,7 +320,12 @@ def clearboard():
 
 
 def clear():
-    labelWL.config(text='')
+    a=' X'
+    if PLAYERN == 0:
+        a = ' X'
+    elif PLAYERN == 1:
+        a = ' O'
+    labelWL.config(text="It Is Now Player%s's Turn" % a)
     LayerChoice.set('')
     ColumnChoice.set('')
     RowChoice.set('')
@@ -416,7 +423,7 @@ ButtonC = Button(root, text='Clear', command = clear)
 ButtonC.grid(row=4, column=3, sticky=(N, S, E, W))
 
 # Win or lose label
-labelWL = Label(root)
+labelWL = Label(root, text = "It Is Now Player X's Turn")
 labelWL.grid(row=5, column=1, columnspan=3)
 
 # Others
